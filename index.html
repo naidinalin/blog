@@ -1,0 +1,76 @@
+  <!DOCTYPE html>
+  <!-- Donut -->
+  <html>
+  <head>
+  	<meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title>Blog</title>  
+  	<link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  </head>
+
+  <body>
+  	<div class="header">
+       <h2>My Blog</h2>
+    </div>
+    <div class="row">
+    <div id="article_container" class="leftcolumn">
+    <div class="card">
+        <h2>Test internship</h2>
+        <h5>Cristi, 2018-05-14</h5>
+        <p>Cerinte:<br>
+        -Articolele sunt formate din autor, data, titlu si continut.<br>
+        -La finalul sectiunii listei cu articole se va insera o alta sectiune cu un formular pentru adaugare de articole noi.<br>
+        -Se vor folosi strict HTML, CSS si JS. <br>
+        -Nu exista restrictii de librarii externe (puteti folosi ce vreti jQuery, Bootstrap, etc.)<br>
+        -Nu e nevoie de server, tineti articolele in memorie si serviti fisierele din sistemul de fisiere.</p>
+     </div>
+        <div class="card">
+            <h3>Add Article</h3>
+            <p>
+             You can add new articles very easy by filling the form bellow.
+            </p>
+            <form>
+                <input id="article_title" type="text" value="Title " onblur="this.value=!this.value?'Title ':this.value;" onfocus="this.select()" onclick="this.value='';"><br><br>
+                <input id="article_author" type="text" value="Author " onblur="this.value=!this.value?'Author ':this.value;" onfocus="this.select()" onclick="this.value='';"><br><br>
+                <input id="article_data" type="text" value="Date" onblur="this.value=!this.value?'Date':this.value;" onfocus="this.select()" onclick="this.value='';"><br><br>
+                <textarea name="comment" id="article_comment" cols="50" rows="10" onblur="this.value=!this.value?'Your Article':this.value;" onfocus="this.select()" onclick="this.value='';">Article</textarea><br><br>
+                <button id="submit_article">Submit Article</button>
+            </form>
+        </div>
+    </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>About Me</h2>
+          <p>Some text about me ...</p>
+        </div>
+        <div class="card">
+               <h3>Follow Me</h3>
+               <p>You can follow me on social media by simply clicking the incons bellow</p>
+               <div class="social">
+                  <a href="http://www.facebook.com" id="fb">
+                       <i class="fab fa-facebook-square"></i>
+                   </a> 
+                   <a href="http://www.instagram.com" id="insta">
+                        <i class="fab fa-instagram"></i>
+                   </a>
+                   <a href="http://www.twitter.com" id="tw">
+                        <i class="fab fa-twitter"></i>
+                   </a>
+             </div>
+        </div>
+      </div>
+    </div>
+  <div class="footer">
+        <p>
+          &#169; 2018 Alin Naidin
+        </p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="articles.json"></script>
+  <script src="js/main.js"></script>
+
+  </body>
+  </html>
